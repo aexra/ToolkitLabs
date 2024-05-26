@@ -2,7 +2,8 @@
   "name": "toolkitlabs",
   "version": "0.0.1",
   "description": "Lab for toolkits",
-  "main": "src/index.js",
+  "type": "module",
+  "main": "src/js/start.js",
   "scripts": {
     "start": "electron . --no-sandbox"
   },
@@ -10,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^30.0.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.11.0"
   }
 }
