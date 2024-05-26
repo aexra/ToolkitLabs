@@ -1,0 +1,14 @@
+{
+  "name": "toolkitlabs",
+  "version": "0.0.1",
+  "description": "Lab for toolkits",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron . --no-sandbox"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^30.0.8"
+  }
+}
