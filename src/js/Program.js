@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron';
+import { app, BrowserWindow } from 'electron';
 
 export class Program {
     constructor(t, w, h, mv, mhp, ip) {
@@ -15,12 +15,17 @@ export class Program {
             width: this.width,
             height: this.height,
             icon: this.iconPath,
-            title: this.title
+            title: this.title,
+            titlebarStyle: 'hidden',
+            frame: false,
+            webPreferences: {
+                nodeIntegration: true
+            }
         })
         this.window.setMenuBarVisibility(this.menuVisible);
         this.window.loadFile(this.mainHtmlPath);
     }
     quit() {
-
+        app.quit();
     }
 }

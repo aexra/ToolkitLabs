@@ -1,3 +1,71 @@
 body {
+    margin: 0;
+
     background-color: #181818;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #181818;
+    height: 40px;
+    border-bottom: 1px solid rgb(53, 53, 53);
+    -webkit-app-region: drag;    /* Allow user to drag the window using this titlebar */
+    -webkit-user-select: none;   /* Prevent user from selecting things */
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header > #right-container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: auto;
+}
+
+header > #right-container .winbtn {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20% auto;
+
+    transition: all 0.3s ease;
+
+    -webkit-app-region: no-drag;
+}
+
+header > #right-container .winbtn:hover {
+    background-color: #373737;
+}
+header > #right-container .winbtn:active {
+    background-color: #707070;
+}
+header > #right-container > #winclose:hover {
+    background-color: #e61111;
+}
+header > #right-container > #winclose:active {
+    background-color: #dd3636;
+}
+
+header > #right-container > #winmin {
+    background-image: url(../../assets/min-w-30.png);
+}
+header > #right-container > #winmax {
+    background-image: url(../../assets/max-w-30.png);
+}
+header > #right-container > #winclose {
+    background-image: url(../../assets/close-w-30.png);
 }

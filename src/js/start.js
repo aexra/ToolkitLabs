@@ -11,11 +11,10 @@ var program = new Program(
     300, 500,
     false,
     'src/html/index.html',
-    path.join(__dirname, '../assets/logo.png')
+    path.join(__dirname, '../../assets/logo.png')
 );
 
 app.whenReady().then(() => program.run());
 app.on('window-all-closed', () => {
     program.quit();
-    app.quit();
 });
